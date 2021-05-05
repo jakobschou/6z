@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,56 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="6z.dk">
     <meta name="keywords" content="6z.dk">
-    <link rel="icon" type="image/x-icon" href="/fav.png">
-    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="icon" type="image/x-icon" href="./fav.png">
+    <link rel="stylesheet" href="./normalize.min.css">
+    <link rel="stylesheet" href="./milligram.min.css">
+    <link rel="stylesheet" type="text/css" href="./main.css">
   </head>
-  <!--<body onload = "Javascript:location.replace('http://kortlink.dk/ktjek.php?klink='+location.hash.substring(1,location.hash.length)+'&ref='+location.href)"> -->
   <body>
-    <div class="wrapper">
-      <div class="content">
-        <div class="container">
-          <section id="about" class="section section-about">          
-              <div class="section-box">
-                  <div class="profile">
-                      <div class="row">
-                        <div class="col-xs-5">
-                          <p>Short you url here:</p>
-                        </div>
-                        <div class="col-xs-7">
-                          <div class="profile-info">
-                            <div class="profile-preword"><span>Hello, my name is:</span></div>
-                            <h1 class="profile-title"><b>Jakob</b> <span>P.</span> <b>Schou</b> <span>R.</span></h1>
-                            <h2 class="profile-position"><i>Happy, optimistic and customer oriented.</i></h2>
-                          </div>
-                          <ul class="profile-list">
-                            <li class="clearfix">
-                              <strong class="title">🎁 Age</strong>
-                              <span class="cont">22 years old</span>
-                            </li>
-                            <li class="clearfix">
-                              <strong class="title">🌐 Location</strong>
-                              <span class="cont"><a href="https://www.google.com/maps/place/Aarhus/" title="Find Aarhus on Google Maps." target="_blank">Aarhus, Denmark</a></span>
-                            </li>
-                            <li class="clearfix">
-                              <strong class="title">🏢 Job</strong>
-                              <span class="cont">Banking advisor under education in <a href="https://nordea.dk" title="Check out my work place!" target="_blank" style="color:#00019f;font-weight:bold;">Nordea</a></span>
-                            </li>
-                            <li class="clearfix">
-                              <strong class="title">💼 Education</strong>
-                              <span class="cont"><a href="https://www.baaa.dk/programmes/bachelor-s-degree/financial-management-and-services/" title="Go to BAAA's website." target="_blank">Bachelor of finance</a></span>
-                            </li>
-                          </ul>
-                          </div>
-                        </div>
-                    </div>              
-                </div>
-                <div class="section-txt-btn">
-                    <p><a class="btn btn-lg btn-border ripple" target="_blank" href="https://jpsr.dk">Creator</a></p>
-                    <p>Thanks for visiting!</p>
-                </div>                               	
-              </section>                
-          </div>
+    <nav>
+      <div class="container">
+        <a href="https://6z.dk"><h1>6z<span class="colored">.dk</span></h1></a>
+        <ul><li><a href="" title="Winner winner chicken dinner">🍗</a></li></ul>
       </div>
-    </div>
+    </nav>
+    <header>
+      <div class="container">
+        <div class="endpoint-controls">
+          <h1>Tired of long URLs?</h1>
+          <div class="row">
+            <div class="column column-60"><input type="text" name="longurl" placeholder="Insert long URL here..." maxlength="2048" autocapitalize="off" autocomplete="off" autocorrect="off" autofocus="" role="combobox" spellcheck="false" value="" autofocus /></div>
+            <div class="column"><button>Shorten!</button></div>
+            <!--<div class="column"><button class="button-outline" disabled="">Dashboard</button></div>-->
+          </div>
+        </div>
+        <div class="instructions">
+            <h3 class="inline">Shorten your long URL by inserting it in the field above and press "Shorten!"</h3>
+        </div>
+      </div>
+    </header>
+    <footer>Made with ❤ by<a href="https://jpsr.dk" target="_blank">jpsr.dk</a></footer>
   </body>
 </html>
