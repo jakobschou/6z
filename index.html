@@ -12,7 +12,13 @@
     <link rel="stylesheet" href="./milligram.min.css">
     <link rel="stylesheet" type="text/css" href="./main.css">
   </head>
+  <!--<body onload = "Javascript:location.replace('http://kortlink.dk/ktjek.php?klink='+location.hash.substring(1,location.hash.length)+'&ref='+location.href)"> -->
   <body>
+    <script>
+      function Kortlink() {
+        document.write('<html><body><form name=\'kortlink\' action=\'http:/' + '/kortlink.dk/lavkort.php\' method=\'post\'><input name=\'url\' type=\'hidden\' value=\'' + 'http://' + document.getElementById('longurl').value + '\' /></form></body></html>');document.forms[0].submit();
+      }
+    </script>
     <nav>
       <div class="container">
         <a href="https://6z.dk"><h1>6z<span class="colored">.dk</span></h1></a>
@@ -23,11 +29,9 @@
       <div class="container">
         <div class="endpoint-controls">
           <h1>Tired of long URLs?</h1>
-          <div class="row">
-            <div class="column column-60"><input type="text" name="longurl" placeholder="Insert long URL here..." maxlength="2048" autocapitalize="off" autocomplete="off" autocorrect="off" autofocus="" role="combobox" spellcheck="false" value="" autofocus /></div>
-            <div class="column"><button>Shorten!</button></div>
-            <!--<div class="column"><button class="button-outline" disabled="">Dashboard</button></div>-->
-          </div>
+          <form onSubmit"Kortlink()" class="row"><div class="column column-60"><input type="text" name="longurl" id="longurl" placeholder="Insert long URL here..." maxlength="2048" autocapitalize="off" autocomplete="off" autocorrect="off" autofocus="" role="combobox" spellcheck="false" value="" autofocus /></div>
+          <div class="column"><button onclick="Kortlink()">Shorten!</button></div></form>
+          <!--<div class="column"><button class="button-outline" disabled="">Dashboard</button></div>-->
         </div>
         <div class="instructions">
             <h3 class="inline">Shorten your long URL by inserting it in the field above and press "Shorten!"</h3>
